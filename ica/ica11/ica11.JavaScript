@@ -26,7 +26,7 @@ function returnRandomStoryString() {
   const randomPlace = randomValueFromArray(places);
   const randomEvent = randomValueFromArray(events);
 
-  let storyText =`It was 30 Fahrenheit outside, so ${randomCharacter} went for a walk. When they got to ${randomPlace}, they shuddered from the cold, then ${randomEvent}. Bob started laughing, but was not surprised — ${randomCharacter} weighs 5 pounds, and it was a cold day. `;
+  let storyText =`It was 30 Fahrenheit outside, so ${randomCharacter} went for a walk. When they got to ${randomPlace}, they shuddered from the cold, then ${randomEvent}. Bob started laughing, but was not surprised — ${randomCharacter} weighs 10 pounds, and it was a cold day. `;
 
   return storyText;
 }
@@ -43,9 +43,9 @@ function generateStory() {
   }
 
   if (document.getElementById("uk").checked) {
-    const weight = `${Math.round(300 / 14)} stone`;
-    const temperature = `${Math.round((94 - 32) * (5 / 9))} Celsius`;
-    newStory = newStory.replace("300 pounds", weight);
+    const weight = `${Math.round(5 / 14)} stone`;
+    const temperature = `${Math.round((30 - 32) * (5 / 9))} Celsius`;
+    newStory = newStory.replace("10 pounds", weight);
       newStory = newStory.replace("94 Fahrenheit", temperature);
   }
 
