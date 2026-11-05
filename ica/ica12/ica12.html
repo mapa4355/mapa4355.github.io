@@ -107,7 +107,6 @@ html {
 </head>
 
 
-
 <body>
     <div class="app">
         <header>Random Christmas Trivia</header>
@@ -134,7 +133,7 @@ html {
       
         try {
             const response = await fetch(endpoint);
-            if (!response.ok) {
+            if (!response.ok){
                 throw Error(response.statusText)
             }
             const json = await response.json();
@@ -145,7 +144,7 @@ html {
             alert('Failed to fetch new quote');
         }
       }
-      function displayQuote() {
+      function displayQuote(quote) {
         const quoteText = document.querySelector("#js-quote-text");
         quoteText.textContent = quote;
       }
